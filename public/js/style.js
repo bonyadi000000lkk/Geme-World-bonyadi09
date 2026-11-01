@@ -1,7 +1,9 @@
 $(document).ready(function () {
-  // Open Sidebar
-  $("#Hamburger").click(function () {
-    $(".SidebarResponsive").stop().animate(
+  // باز کردن منو
+  $("#Hamburger").on("click", function (e) {
+    e.preventDefault();
+
+    $(".SidebarResponsive").stop(true).animate(
       {
         left: "0px",
       },
@@ -11,9 +13,11 @@ $(document).ready(function () {
     $("html").css("overflow", "hidden");
   });
 
-  // Close Sidebar
-  $(".SidebarResponsive__close").click(function () {
-    $(".SidebarResponsive").stop().animate(
+  // بستن منو
+  $(".SidebarResponsive__close").on("click", function (e) {
+    e.preventDefault();
+
+    $(".SidebarResponsive").stop(true).animate(
       {
         left: "-100rem",
       },

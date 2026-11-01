@@ -938,7 +938,7 @@ body {
 .best__content-number {
   width: 6rem;
   height: 7.5rem;
-  background: url(/public/images/number.png) no-repeat;
+  background: url(./images/number.png) no-repeat;
   background-size: 33rem;
   position: absolute;
   top: -5.1rem;
