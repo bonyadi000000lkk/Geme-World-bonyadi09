@@ -1,0 +1,48 @@
+.dev-title {
+  width: 100%;
+  @include CenterizeTag(space-between);
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  @include Responsive(tablet) {
+    @include CenterizeTag(center);
+    gap: 2.5rem;
+    &__title {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include CenterizeTag();
+    gap: 25px;
+    @include Responsive(phone) {
+      @include CenterizeTag(center);
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 7px;
+    &.active {
+      color: $color-secondary;
+      border-top: 2px solid $color-secondary;
+    }
+  }
+  &__btns {
+    @include CenterizeTag();
+    gap: 10px;
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    @include CenterizeTag();
+    color: $color-white;
+    cursor: pointer;
+    &.active {
+      background-color: $color-secondary;
+      border-radius: 6px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+.gameworld {
+  width: 80%;
+  @include Responsive(tabletL) {
+    width: 100%;
+  }
+}

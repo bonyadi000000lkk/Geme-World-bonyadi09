@@ -1,0 +1,65 @@
+.flag-team {
+  width: 12rem;
+  @include CenterizeTag();
+  flex-direction: column;
+  &__content {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 100%;
+    @include CenterizeTag();
+    box-shadow: 0 0 20px #8383ff;
+    &--1 {
+      width: 11rem;
+      height: 11rem;
+      background-image: conic-gradient(#ff2b28 25%, #e73bf3 0);
+    }
+    &--2 {
+      width: 14.5rem;
+      height: 14.5rem;
+      background-image: conic-gradient(red 25%, blue 0);
+    }
+    &--3 {
+      width: 11rem;
+      height: 11rem;
+      background-image: conic-gradient(#eca819 25%, blue 0);
+    }
+  }
+
+  &__circle {
+    width: 94%;
+    height: 94%;
+    @include CenterizeTag();
+    border-radius: 100%;
+    &--1 {
+      background: radial-gradient(circle, #9c091c 0, #e31c3b 50%, #323676 100%);
+    }
+    &--2 {
+      background: radial-gradient(circle, #0658c6 0, #0c678a 50%, #000307 100%);
+    }
+    &--3 {
+      background: radial-gradient(circle, #eca819 0, #eca819 50%, #000307 100%);
+    }
+  }
+  &__image {
+    width: 50%;
+    object-fit: cover;
+  }
+  &__subtitle {
+    @include CenterizeTag();
+    margin-top: 1.7rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__style1 {
+    @include CenterizeTag();
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+  &__style2 {
+    @include CenterizeTag(center, flex-start);
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+}

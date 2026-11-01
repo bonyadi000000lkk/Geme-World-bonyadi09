@@ -1,0 +1,130 @@
+.popular {
+  width: 100%;
+  padding: 1rem 0rem;
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    &-items {
+      width: 100%;
+      margin-top: 2rem;
+      @include CenterizeTag(center);
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 0 1rem 0 1rem;
+    }
+    &-item {
+      width: 38rem;
+    }
+    &-image {
+      width: 100%;
+      background-color: $color-primary;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    &-pic {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+    }
+    &-parent {
+      &:hover .popular__content-cover {
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.8s ease-in;
+        opacity: 0.4;
+      }
+    }
+    &-cover {
+      width: 16.5rem;
+      height: 100%;
+      background-color: $color-tertiary;
+      position: absolute;
+      top: 0;
+      right: 0;
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+      transition: all 0.8s ease-in;
+      &--1 {
+        font-size: $font-size-title;
+        color: $color-white;
+        font-weight: bold;
+        @include CenterizeTag();
+        z-index: 10;
+      }
+      &--2 {
+        right: 0.7rem;
+        background-color: $color-tertiary-lihgt;
+      }
+    }
+
+    &-info {
+      margin-top: 2.5rem;
+      @include CenterizeTag(space-between);
+    }
+    &-right {
+      width: 68%;
+    }
+    &-title {
+      font-size: 1.9rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    &-description {
+      color: $color-white;
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      line-height: 2rem;
+    }
+    &-list {
+      @include CenterizeTag(flex-start);
+      gap: 0.7rem;
+    }
+    &-circle {
+      width: 1.3rem;
+      height: 1.3rem;
+      background-color: #202938;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 0.3rem 0.4rem $color-green;
+      margin-right: 1rem;
+      margin-left: 0.3rem;
+    }
+    &-tiny {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: $color-green;
+      border-radius: 100%;
+    }
+    &-rate,
+    &-online {
+      color: $color-white;
+      font-size: $font-size-sm;
+    }
+
+    &-left {
+      width: 50%;
+      @include CenterizeTag();
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+    &-match {
+      @include CenterizeTag();
+      gap: 0.7rem;
+    }
+    &-logo {
+      width: 1.5rem;
+    }
+    &-team {
+      color: $color-white;
+      font-weight: bold;
+    }
+    &-score {
+      color: $color-orange;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@mixin CenterizeTag($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin PositinCenter() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+//! -------Mixin BreakPoints-----
+@mixin Responsive($breakpoint) {
+  //?phone breakpoint ----- 576px ~ 36em
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  }
+
+  //?phone Landscape breakpoint ----- 768px ~ 48em
+  @if $breakpoint==phoneL {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  //?Tablet breakpoint ----- 992px ~ 62em
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 62em) {
+      @content;
+    }
+  }
+
+  //?Tablet Landscape breakpoint ----- 1200px ~ 75em
+  @if $breakpoint==tabletL {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  //?Laptab breakpoint ----- 1800px ~ 112.5em
+  @if $breakpoint==laptab {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+}

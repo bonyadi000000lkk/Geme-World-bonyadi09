@@ -1,0 +1,25 @@
+{
+  "name": "project_sass-1-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss public/css/style.css -w",
+    "compile:sass": "sass sass/main.scss public/css/style.compile.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 version' public/css/style.compile.css -o public/css/style.prefix.css",
+    "compress:css": "sass  public/css/style.prefix.css public/css/style.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "postcss-cli": "^12.0.0",
+    "sass": "^1.77.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "jquery": "^4.0.0"
+  }
+}

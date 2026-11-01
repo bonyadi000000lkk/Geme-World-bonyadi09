@@ -1,0 +1,405 @@
+.tournaments {
+  width: 100%;
+  margin-top: 2rem;
+  //?  GameWorld-Content sections
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    &-head {
+      @include CenterizeTag();
+      justify-content: center !important;
+    }
+    &-main {
+      width: 100%;
+      margin-top: 2rem;
+      @include CenterizeTag(center);
+      flex-wrap: wrap;
+      gap: 5rem;
+    }
+    &-left {
+      width: 80%;
+      height: 100%;
+      @include Responsive(phoneL) {
+        width: 100%;
+      }
+    }
+  }
+  //?  GameWorld-Battle sections
+  &__battle {
+    width: 100%;
+    padding: 3rem 2.5rem;
+    background-color: $color-primary;
+    border-radius: 1.5rem;
+    @include CenterizeTag(center);
+    gap: 1rem;
+    @include Responsive(tabletL) {
+      @include CenterizeTag(center);
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    &-left {
+      width: 50rem;
+      height: 100%;
+      @include CenterizeTag(center, space-between);
+      flex-direction: column;
+      gap: 2.1rem;
+    }
+    &-title {
+      margin-bottom: 3rem;
+    }
+    &-subtitle {
+      color: $color-white;
+      margin-bottom: 1rem;
+    }
+    &-text {
+      color: $color-green;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    &-items {
+      @include CenterizeTag(space-between);
+      @include Responsive(phone) {
+        flex-wrap: wrap;
+        @include CenterizeTag(center);
+        gap: 4rem;
+      }
+    }
+    &-sward {
+      width: 4rem;
+      @include Responsive(phone) {
+        width: 11rem;
+      }
+    }
+
+    &-progress {
+      width: 100%;
+      height: 1.5rem;
+      background-color: $color-bg;
+      border-radius: 1.7rem;
+      margin-top: 3.5rem;
+      &-perecent {
+        width: 70%;
+        height: 100%;
+        border-radius: 1.5rem;
+        background: linear-gradient(
+          120deg,
+          yellow 0%,
+          #e4ec7f 50%,
+          #ffffb7 70%
+        );
+        font-size: $font-size-sm;
+        @include CenterizeTag();
+      }
+    }
+    &-right {
+      width: 28rem;
+      height: 100%;
+    }
+    &-thead {
+      width: 100%;
+      height: 3.8rem;
+      @include CenterizeTag(space-between);
+      &-icon {
+        width: 3.5rem;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-color: $color-secondary;
+        color: $color-white;
+        font-size: 1.4rem;
+        @include CenterizeTag();
+      }
+      &-group {
+        width: 69%;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-color: $color-secondary;
+        color: $color-white;
+        font-weight: bold;
+        @include CenterizeTag();
+      }
+    }
+    &-body {
+      width: 100%;
+    }
+    &-lists {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    &-list {
+      width: 100%;
+      height: 5rem;
+      border-radius: 0.5rem;
+      padding: 1rem 1rem;
+      @include CenterizeTag(space-between);
+      background-color: $color-bg;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      &.active {
+        background-color: $color-red;
+        .tournaments__battle-number,
+        .tournaments__battle-score {
+          background-color: $color-red-dark;
+        }
+      }
+      &.hover:hover {
+        background-color: $color-red-light;
+        .tournaments__battle-number,
+        .tournaments__battle-score {
+          background-color: $color-red-dark;
+        }
+      }
+    }
+    &-king {
+      height: 100%;
+      @include CenterizeTag(flex-start);
+      gap: 0.9rem;
+    }
+    &-number,
+    &-score {
+      width: 3rem;
+      height: 100%;
+      border-radius: 0.5rem;
+      background-color: $color-primary;
+      @include CenterizeTag();
+      color: $color-white;
+      font-size: 1.3rem;
+    }
+    &-image,
+    &-coin {
+      width: 2rem;
+    }
+    &-pic {
+      width: 100%;
+      object-fit: cover;
+      @include CenterizeTag();
+    }
+    &-nameteam {
+      color: $color-white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &-points {
+      height: 100%;
+      @include CenterizeTag(space-between);
+      gap: 0.9rem;
+    }
+
+    &count {
+      font-size: 1.3rem;
+      color: $color-white;
+    }
+  }
+  //?  GameWorld-Info sections
+  &__info {
+    &-item {
+      width: 100%;
+      @include CenterizeTag(space-between);
+      margin-top: 1.5rem;
+      background-color: #202938;
+      border-radius: 1.5rem;
+      padding: 3rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      @include Responsive(phone) {
+        overflow-x: auto;
+        gap: 3rem;
+      }
+    }
+    &-game {
+      @include CenterizeTag();
+      gap: 1.2rem;
+    }
+    &-image {
+      @include CenterizeTag();
+    }
+    &-pic {
+      width: 8rem;
+    }
+    // &-name {
+    //   position: relative;
+    //   &::before {
+    //     content: "";
+    //     width: 0.1rem;
+    //     height: 11rem;
+    //     background-color: #7a7a7a;
+    //     transform: rotate(20deg);
+    //     position: absolute;
+    //     left: -3.5rem;
+    //     @include Responsive(phoneL) {
+    //       content: ss !important;
+    //     }
+    //   }
+    // }
+    &-bg {
+      width: 7rem;
+    }
+    &-shape1 {
+      width: 14.5rem;
+      height: 100%;
+      background-color: red;
+      top: 0;
+      right: 0;
+      position: absolute;
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+      background: linear-gradient(
+        110deg,
+        $color-purple-dark 0,
+        $color-purple-dark 28%,
+        $color-purple 28%,
+        $color-purple 100%
+      );
+      @include CenterizeTag();
+      @include Responsive(tablet) {
+        display: none;
+      }
+      &.shape2 {
+        background: linear-gradient(
+          110deg,
+          $color-secondary-light 0,
+          $color-secondary-light 28%,
+          $color-secondary 28%,
+          $color-secondary 100%
+        );
+      }
+      &-text {
+        color: $color-white;
+        font-weight: bold;
+        font-family: $font-rubik;
+        font-size: $font-size-lg;
+      }
+    }
+    &-more {
+      width: 100%;
+      &-link {
+        width: 100%;
+        height: 5.5rem;
+        background-color: $color-secondary;
+        color: $color-white-dark;
+        font-size: $font-size-default;
+        font-weight: bold;
+        @include CenterizeTag();
+        margin-top: 1rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: $color-secondary-light;
+        }
+      }
+    }
+  }
+
+  //?  GameWorld-Closing sections
+  &__closing {
+    width: 80%;
+    background-color: $color-primary;
+    border-radius: 1.5rem;
+    padding: 3rem 7.5rem;
+    position: relative;
+    top: -3rem;
+    @include Responsive(tablet) {
+      width: 80%;
+    }
+    @include Responsive(phoneL) {
+      width: 85rem;
+    }
+    @include Responsive(phone) {
+      padding: 3rem 0.8rem;
+    }
+    &-head {
+      text-align: center;
+    }
+    &-title {
+      color: $color-white;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    &-subtitle {
+      color: $color-green;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    &-items {
+      width: 100%;
+      @include CenterizeTag();
+      flex-direction: column;
+      margin-top: 3.5rem;
+      gap: 3.5rem;
+    }
+    &-item {
+      width: 100%;
+      @include CenterizeTag();
+      flex-direction: column;
+      @include Responsive(phone) {
+        position: relative;
+        margin-top: 4rem;
+      }
+    }
+    &-team {
+      width: 100%;
+      @include CenterizeTag(space-between);
+      @include Responsive(phone) {
+        gap: 2rem;
+      }
+    }
+    &-result {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: bold;
+      font-family: $font-rubik;
+      @include CenterizeTag(center, start);
+      height: 8rem;
+      @include Responsive(phone) {
+        width: 100%;
+        align-items: end;
+        position: absolute;
+      }
+    }
+
+    &-progress {
+      width: 100%;
+      height: 1.5rem;
+      background-color: #111a23;
+      border-radius: 1.7rem;
+      margin-top: 3.5rem;
+      &-perecent {
+        width: 70%;
+        height: 100%;
+        border-radius: 1.5rem;
+        background: linear-gradient(
+          120deg,
+          yellow 0%,
+          #e4ec7f 50%,
+          #ffffb7 70%
+        );
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      padding: 1.5rem 0;
+      border-radius: 0.5rem;
+      @include CenterizeTag();
+      font-weight: bold;
+      transition: all 0.4s ease-in;
+      background: linear-gradient(
+        to right,
+        #bf953f,
+        #fcf6ba,
+        #b38728,
+        #fbf5b7,
+        #aa771c
+      );
+      cursor: pointer;
+      margin-top: 3rem;
+      &:hover {
+        background: linear-gradient(to right, #facd7b, #fceabb, #e0bd7c);
+        letter-spacing: 0.4rem;
+      }
+    }
+  }
+}

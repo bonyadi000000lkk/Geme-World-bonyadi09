@@ -1,0 +1,37 @@
+//!Title
+.title__white {
+  color: $color-white;
+  font-size: $font-size-title;
+  font-weight: bold;
+  @include Responsive(phone) {
+    font-size: 2rem;
+  }
+}
+.title__pink {
+  color: $color-tertiary;
+  font-size: $font-size-title;
+  font-weight: bold;
+  @include Responsive(phone) {
+    font-size: 2rem;
+  }
+}
+
+//! Subtitle
+.subtitle-white {
+  color: $color-white;
+  font-weight: bold;
+  &--font {
+    font-size: 2rem;
+    @include Responsive(phone) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.subtitle-gray {
+  color: $color-title;
+  font-size: 1.3rem;
+  font-weight: bold;
+  &--font {
+    font-size: 1.6rem;
+  }
+}
