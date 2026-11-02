@@ -31,7 +31,7 @@
     background-color: $color-primary;
     border-radius: 1.5rem;
     @include CenterizeTag(center);
-    gap: 1rem;
+    gap: 4rem;
     @include Responsive(tabletL) {
       @include CenterizeTag(center);
       flex-wrap: wrap;
