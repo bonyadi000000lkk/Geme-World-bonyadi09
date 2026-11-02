@@ -483,7 +483,7 @@ body {
 .sidebar__filter-icon {
   width: 4.5rem;
   height: 5.8rem;
-  background: url(../../public/images/sidebar-slider.png) no-repeat;
+  background: url(/public/images/sidebar-slider.png) no-repeat;
   background-size: cover;
 }
 .sidebar__filter-icon--1 {
